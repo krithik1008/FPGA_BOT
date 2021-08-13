@@ -1,0 +1,125 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "rb",
+					"strict" : false
+				},
+				{
+					"name" : "ra",
+					"strict" : false
+				},
+				{
+					"name" : "lb",
+					"strict" : false
+				},
+				{
+					"name" : "la",
+					"strict" : false
+				},
+				{
+					"name" : "din",
+					"strict" : false
+				},
+				{
+					"name" : "s3",
+					"strict" : false
+				},
+				{
+					"name" : "serial",
+					"strict" : false
+				},
+				{
+					"name" : "scl",
+					"strict" : false
+				},
+				{
+					"name" : "node_led",
+					"strict" : false
+				},
+				{
+					"name" : "s2",
+					"strict" : false
+				},
+				{
+					"name" : "led1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sda",
+					"strict" : false
+				},
+				{
+					"name" : "mhz50",
+					"strict" : false
+				},
+				{
+					"name" : "sense",
+					"strict" : false
+				},
+				{
+					"name" : "adcin",
+					"strict" : false
+				},
+				{
+					"name" : "key0",
+					"strict" : false
+				},
+				{
+					"name" : "blocked_path",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

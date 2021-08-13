@@ -1,0 +1,138 @@
+
+State Machine - |bot|I2C_Controller:inst3|nst
+Name nst.READ_DATA nst.WAIT_1_CYCLE_3 nst.START_OPERATION nst.READ_REG_2 nst.WAIT_1_CYCLE_2 nst.SET_RES nst.READ_REG nst.WAIT_1_CYCLE_1 nst.BAND nst.IDLE 
+nst.IDLE 0 0 0 0 0 0 0 0 0 0 
+nst.BAND 0 0 0 0 0 0 0 0 1 1 
+nst.WAIT_1_CYCLE_1 0 0 0 0 0 0 0 1 0 1 
+nst.READ_REG 0 0 0 0 0 0 1 0 0 1 
+nst.SET_RES 0 0 0 0 0 1 0 0 0 1 
+nst.WAIT_1_CYCLE_2 0 0 0 0 1 0 0 0 0 1 
+nst.READ_REG_2 0 0 0 1 0 0 0 0 0 1 
+nst.START_OPERATION 0 0 1 0 0 0 0 0 0 1 
+nst.WAIT_1_CYCLE_3 0 1 0 0 0 0 0 0 0 1 
+nst.READ_DATA 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |bot|I2C_Core_Verilog:inst4|sda_state
+Name sda_state.CLEANUP sda_state.STOP_BIT sda_state.SEND_NACK sda_state.SYNC_BACK2 sda_state.DATA_MSB sda_state.SEND_ACK sda_state.SYNC_BACK sda_state.DATA_LSB sda_state.WAIT_ACK3 sda_state.SLAVE_ADDR_RD sda_state.WAIT_ACK2 sda_state.REG_ADDR sda_state.WAIT_ACK1 sda_state.SLAVE_ADDR_WR sda_state.START_BIT sda_state.00000 sda_state.SLAVE_CTRL_WR 
+sda_state.00000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+sda_state.START_BIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 
+sda_state.SLAVE_ADDR_WR 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 
+sda_state.WAIT_ACK1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 
+sda_state.REG_ADDR 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 
+sda_state.WAIT_ACK2 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 
+sda_state.SLAVE_ADDR_RD 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 
+sda_state.WAIT_ACK3 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 
+sda_state.DATA_LSB 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 
+sda_state.SYNC_BACK 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 
+sda_state.SEND_ACK 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 
+sda_state.DATA_MSB 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 
+sda_state.SYNC_BACK2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 
+sda_state.SEND_NACK 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+sda_state.STOP_BIT 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+sda_state.CLEANUP 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+sda_state.SLAVE_CTRL_WR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+
+State Machine - |bot|I2C_Core_Verilog:inst4|scl_state
+Name scl_state.00 scl_state.SCL_TOGGLE scl_state.SDA_WENT_LOW 
+scl_state.00 0 0 0 
+scl_state.SDA_WENT_LOW 1 0 1 
+scl_state.SCL_TOGGLE 1 1 0 
+
+State Machine - |bot|message:inst|stop_cnt
+Name stop_cnt.000 stop_cnt.010 stop_cnt.001 
+stop_cnt.000 0 0 0 
+stop_cnt.001 1 0 1 
+stop_cnt.010 1 1 0 
+
+State Machine - |bot|message:inst|nsst
+Name nsst.off nsst.on nsst.ssu nsst.w nsst.pu nsst.mpu nsst.scan 
+nsst.scan 0 0 0 0 0 0 0 
+nsst.mpu 0 0 0 0 0 1 1 
+nsst.pu 0 0 0 0 1 0 1 
+nsst.w 0 0 0 1 0 0 1 
+nsst.ssu 0 0 1 0 0 0 1 
+nsst.on 0 1 0 0 0 0 1 
+nsst.off 1 0 0 0 0 0 1 
+
+State Machine - |bot|message:inst|colour_sensor:utt1|nxt
+Name nxt.BLUE nxt.RED nxt.WHITE nxt.IDLE nxt.DONE 
+nxt.IDLE 0 0 0 0 0 
+nxt.WHITE 0 0 1 1 0 
+nxt.RED 0 1 0 1 0 
+nxt.BLUE 1 0 0 1 0 
+nxt.DONE 0 0 0 1 1 
+
+State Machine - |bot|message:inst|main:utt|nst
+Name nst.FCLEAN nst.CLEANUP nst.TX_STOP_BIT nst.TX_DATA_BIT nst.TX_START_BIT nst.IDLE 
+nst.IDLE 0 0 0 0 0 0 
+nst.TX_START_BIT 0 0 0 0 1 1 
+nst.TX_DATA_BIT 0 0 0 1 0 1 
+nst.TX_STOP_BIT 0 0 1 0 0 1 
+nst.CLEANUP 0 1 0 0 0 1 
+nst.FCLEAN 1 0 0 0 0 1 
+
+State Machine - |bot|RECEIVER:inst2|next
+Name next.STOP next.BPATH next.INTP next.RX_STOP_BIT next.RX_DATA_BIT next.IDLE 
+next.IDLE 0 0 0 0 0 0 
+next.RX_DATA_BIT 0 0 0 0 1 1 
+next.RX_STOP_BIT 0 0 0 1 0 1 
+next.INTP 0 0 1 0 0 1 
+next.BPATH 0 1 0 0 0 1 
+next.STOP 1 0 0 0 0 1 
+
+State Machine - |bot|traversal:inst6|temp_state
+Name temp_state.run_end temp_state.turn_delay temp_state.s3 temp_state.s2 temp_state.s1 temp_state.idle temp_state.unit_path_init temp_state.luturn temp_state.scan_init temp_state.scan_traversal temp_state.calculation_w temp_state.calculation_pu temp_state.calculation_ssu temp_state.calculation_mpu temp_state.uturn temp_state.decision temp_state.fright temp_state.fleft temp_state.cright temp_state.cleft temp_state.measure temp_state.start temp_state.path_block 
+temp_state.path_block 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+temp_state.start 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+temp_state.measure 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+temp_state.cleft 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+temp_state.cright 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+temp_state.fleft 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+temp_state.fright 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+temp_state.decision 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+temp_state.uturn 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+temp_state.calculation_mpu 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+temp_state.calculation_ssu 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+temp_state.calculation_pu 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+temp_state.calculation_w 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+temp_state.scan_traversal 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+temp_state.scan_init 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+temp_state.luturn 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+temp_state.unit_path_init 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+temp_state.idle 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+temp_state.s1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+temp_state.s2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+temp_state.s3 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+temp_state.turn_delay 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+temp_state.run_end 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |bot|traversal:inst6|prev
+Name prev.scan_traversal 
+prev.measure 0 
+prev.scan_traversal 1 
+
+State Machine - |bot|traversal:inst6|nst
+Name nst.run_end nst.turn_delay nst.s3 nst.s2 nst.s1 nst.idle nst.unit_path_init nst.luturn nst.scan_init nst.scan_traversal nst.calculation_w nst.calculation_pu nst.calculation_ssu nst.calculation_mpu nst.uturn nst.decision nst.fright nst.fleft nst.cright nst.cleft nst.measure nst.start nst.path_block 
+nst.path_block 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+nst.start 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+nst.measure 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+nst.cleft 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+nst.cright 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+nst.fleft 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+nst.fright 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+nst.decision 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+nst.uturn 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+nst.calculation_mpu 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+nst.calculation_ssu 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+nst.calculation_pu 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+nst.calculation_w 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+nst.scan_traversal 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+nst.scan_init 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+nst.luturn 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+nst.unit_path_init 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+nst.idle 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+nst.s1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+nst.s2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+nst.s3 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+nst.turn_delay 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+nst.run_end 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

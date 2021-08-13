@@ -1,0 +1,198 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 264 288)
+	(text "traversal" (rect 5 0 40 12)(font "Arial" ))
+	(text "inst" (rect 8 256 20 268)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "adcin" (rect 0 0 20 12)(font "Arial" ))
+		(text "adcin" (rect 21 27 41 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "mhz32" (rect 0 0 25 12)(font "Arial" ))
+		(text "mhz32" (rect 21 43 46 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "khz100" (rect 0 0 25 12)(font "Arial" ))
+		(text "khz100" (rect 21 59 46 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "key0" (rect 0 0 20 12)(font "Arial" ))
+		(text "key0" (rect 21 75 41 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "accel[15..0]" (rect 0 0 43 12)(font "Arial" ))
+		(text "accel[15..0]" (rect 21 91 64 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "blocked_path[15..0]" (rect 0 0 75 12)(font "Arial" ))
+		(text "blocked_path[15..0]" (rect 21 107 96 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "RX_DATA_DONE" (rect 0 0 83 12)(font "Arial" ))
+		(text "RX_DATA_DONE" (rect 21 123 104 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "pu_count[7..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "pu_count[7..0]" (rect 21 139 77 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "mpu_count[7..0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "mpu_count[7..0]" (rect 21 155 85 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 3))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "w_count[7..0]" (rect 0 0 53 12)(font "Arial" ))
+		(text "w_count[7..0]" (rect 21 171 74 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "red_flagg" (rect 0 0 37 12)(font "Arial" ))
+		(text "red_flagg" (rect 21 187 58 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192)(line_width 1))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "cs" (rect 0 0 9 12)(font "Arial" ))
+		(text "cs" (rect 218 27 227 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 1))
+	)
+	(port
+		(pt 248 48)
+		(output)
+		(text "din" (rect 0 0 10 12)(font "Arial" ))
+		(text "din" (rect 217 43 227 55)(font "Arial" ))
+		(line (pt 248 48)(pt 232 48)(line_width 1))
+	)
+	(port
+		(pt 248 64)
+		(output)
+		(text "la" (rect 0 0 5 12)(font "Arial" ))
+		(text "la" (rect 222 59 227 71)(font "Arial" ))
+		(line (pt 248 64)(pt 232 64)(line_width 1))
+	)
+	(port
+		(pt 248 80)
+		(output)
+		(text "lb" (rect 0 0 5 12)(font "Arial" ))
+		(text "lb" (rect 222 75 227 87)(font "Arial" ))
+		(line (pt 248 80)(pt 232 80)(line_width 1))
+	)
+	(port
+		(pt 248 96)
+		(output)
+		(text "ra" (rect 0 0 8 12)(font "Arial" ))
+		(text "ra" (rect 219 91 227 103)(font "Arial" ))
+		(line (pt 248 96)(pt 232 96)(line_width 1))
+	)
+	(port
+		(pt 248 112)
+		(output)
+		(text "rb" (rect 0 0 8 12)(font "Arial" ))
+		(text "rb" (rect 219 107 227 119)(font "Arial" ))
+		(line (pt 248 112)(pt 232 112)(line_width 1))
+	)
+	(port
+		(pt 248 128)
+		(output)
+		(text "motor_3v" (rect 0 0 40 12)(font "Arial" ))
+		(text "motor_3v" (rect 187 123 227 135)(font "Arial" ))
+		(line (pt 248 128)(pt 232 128)(line_width 1))
+	)
+	(port
+		(pt 248 144)
+		(output)
+		(text "node_detect" (rect 0 0 48 12)(font "Arial" ))
+		(text "node_detect" (rect 179 139 227 151)(font "Arial" ))
+		(line (pt 248 144)(pt 232 144)(line_width 1))
+	)
+	(port
+		(pt 248 160)
+		(output)
+		(text "node_count[5..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "node_count[5..0]" (rect 161 155 227 167)(font "Arial" ))
+		(line (pt 248 160)(pt 232 160)(line_width 3))
+	)
+	(port
+		(pt 248 176)
+		(output)
+		(text "accelvalid" (rect 0 0 37 12)(font "Arial" ))
+		(text "accelvalid" (rect 190 171 227 183)(font "Arial" ))
+		(line (pt 248 176)(pt 232 176)(line_width 1))
+	)
+	(port
+		(pt 248 192)
+		(output)
+		(text "in_scan" (rect 0 0 30 12)(font "Arial" ))
+		(text "in_scan" (rect 197 187 227 199)(font "Arial" ))
+		(line (pt 248 192)(pt 232 192)(line_width 1))
+	)
+	(port
+		(pt 248 208)
+		(output)
+		(text "unit[2..0]" (rect 0 0 33 12)(font "Arial" ))
+		(text "unit[2..0]" (rect 194 203 227 215)(font "Arial" ))
+		(line (pt 248 208)(pt 232 208)(line_width 3))
+	)
+	(port
+		(pt 248 224)
+		(output)
+		(text "is_stop" (rect 0 0 28 12)(font "Arial" ))
+		(text "is_stop" (rect 199 219 227 231)(font "Arial" ))
+		(line (pt 248 224)(pt 232 224)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 256)(line_width 1))
+	)
+)
